@@ -8,5 +8,4 @@ class Place < ApplicationRecord
   validates :name, presence: true
   validates :latitude, numericality: true
   validates :longitude, numericality: true
-  validates :build_in_year, numericality: { only_integer: true }
 end

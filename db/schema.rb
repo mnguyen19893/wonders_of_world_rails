@@ -16,8 +16,9 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_02_195824) do
     t.decimal "latitude"
     t.decimal "longitude"
     t.string "picture_link"
-    t.integer "build_in_year"
+    t.string "build_in_year"
     t.string "wikipedia_link"
+    t.string "location"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "type_id", null: false

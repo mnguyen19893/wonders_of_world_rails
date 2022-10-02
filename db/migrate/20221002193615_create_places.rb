@@ -5,8 +5,9 @@ class CreatePlaces < ActiveRecord::Migration[7.0]
       t.decimal :latitude
       t.decimal :longitude
       t.string :picture_link
-      t.integer :build_in_year
+      t.string :build_in_year
       t.string :wikipedia_link
+      t.string :location
 
       t.timestamps
     end
