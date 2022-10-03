@@ -1,0 +1,22 @@
+<div class="content">
+  <h1>About Places</h1>
+  <p>Wonders Of World is a dataset containing 50 data points about the wonders of the world. The dataset is a CSV file is retrieved from the
+    <a target="_blank" href="https://www.kaggle.com/datasets/karnikakapoor/wonders-of-world">kaggle.com</a> website.</p>
+
+  <p>The purpose of this application is to display a list of Wonders Of World. The data set contains 7 columns. They are name, type, latitude, longitude, location, wikipedia link, picture link, build in year. The data of the Users table and User_Places are generated from the Fake library.</p>
+
+  <p>Users can create places, like places. Each place displays name, location, wikipedia link, picture, and it’s location in a map view</p>
+
+  <p>Here are tables in my application</p>
+  <ul>
+    <li>Users table has id (PK), username, email, password, bio, created_at, updated_at.</li>
+    <li>Places table has id (PK), customer_id (FK), type_id (FK), name, latitude, longitude, picture_link, build_in_year, type_id, wikipedia_link, created_at, updated_at</li>
+    <li>Type table has an id (PK), name, created_at, updated_at.</li>
+    <li>User_Places table has customer_id (PK), place_id (PK)</li>
+  </ul>
+
+  <figure class="image is-square">
+    <img src="<%= asset_path('diagram.png') %>">
+  </figure>
+</div>
+
