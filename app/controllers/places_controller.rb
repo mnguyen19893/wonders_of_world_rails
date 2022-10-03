@@ -1,6 +1,6 @@
 class PlacesController < ApplicationController
   def index
-    @places = Place.includes(:user).all
+    @places = Place.includes(:user).page params[:page]
   end
 
   def show
