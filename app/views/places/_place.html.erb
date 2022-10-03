@@ -1,0 +1,13 @@
+<tr>
+  <th>
+    <figure class="image is-64x64">
+      <%= link_to image_tag(place.picture_link, alt: place.name), place  %>
+    </figure>
+  </th>
+  <td>
+    <%= link_to place.name, place %>
+  </td>
+  <td><%= place.location %></td>
+  <td><%= place.build_in_year %></td>
+  <td><%= link_to place.user.username, place.user %></td>
+</tr>

@@ -1,2 +1,34 @@
-<h1>Places#show</h1>
-<p>Find me in app/views/places/show.html.erb</p>
+<div class="card">
+  <div class="card-image">
+    <figure class="image is-2by1">
+      <%= link_to image_tag(@place.picture_link, alt: @place.name), @place  %>
+    </figure>
+  </div>
+  <div class="card-content">
+    <div class="media">
+      <div class="media-content">
+        <p class="title is-4"><%= @place.name%></p>
+        <p class="subtitle is-6">
+          <strong>Author: </strong><%= link_to @place.user.username, @place.user %>
+          <br>
+          <strong>Email: </strong><%= @place.user.email %>
+        </p>
+      </div>
+    </div>
+
+    <div class="content">
+      <strong>Location: </strong><%= @place.location %><br>
+      <strong>Build in year: </strong><%= @place.build_in_year %><br>
+      <strong>Wikipedia: </strong><%= link_to @place.wikipedia_link, @place.wikipedia_link %><br>
+      <strong>Type: </strong><%= link_to @place.type.name, @place.type %><br>
+      <strong>Liked by: </strong>
+      <% @place.users.each do |user| %>
+        <%= link_to user.username, user %>,
+      <% end %>
+
+
+<!--      <%#= @place.users.map(&:email).join(',') %><br>-->
+
+    </div>
+  </div>
+</div>

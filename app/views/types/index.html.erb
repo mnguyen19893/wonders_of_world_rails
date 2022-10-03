@@ -1,0 +1,29 @@
+<div class="content">
+  <h1>Types</h1>
+
+  <table class="table">
+    <thead>
+    <tr>
+      <th><abbr title="Name">Name</abbr></th>
+      <th><abbr title="# places"># places</abbr></th>
+      <th><abbr title=""></abbr></th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <% @types.each do |type| %>
+      <tr>
+        <th>
+          <%= link_to type.name, type %>
+        </th>
+        <td>
+          <%= type.places.count %>
+        </td>
+        <td>
+          <%= link_to 'Show places', type, class: 'button is-primary' %>
+        </td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>
