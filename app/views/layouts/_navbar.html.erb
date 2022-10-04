@@ -30,11 +30,11 @@
       <div class="navbar-item">
         <div class="buttons">
           <%= form_with(url: search_places_path, method: :get, local: true) do |f| %>
-            <div class="field is-grouped mb-5">
+            <div class="field is-grouped">
               <div class="control is-expanded">
                 <%= text_field_tag(:keywords, nil, class: "input", placeholder: "Search for places") %>
               </div>
-              <div class="select">
+              <div class="select mr-3">
                 <%= f.collection_select :type, Type.all, :id, :name, prompt: true %>
               </div>
               <div class="control">
