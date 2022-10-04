@@ -1,10 +1,15 @@
-<p class="mb-5">
-  Found <%= pluralize(@places.count, 'Movie') %> found when search for <%= params[:keywords] %>
-</p>
+<div class="content">
+  <p class="mb-5">
+    Found <%= pluralize(@places.count, 'Movie') %> found when search for "<%= params[:keywords]%>"
+    <% if @type %>
+      , type: "<%= @type.name %>"
+    <% end %>
+  </p>
 
-<table class="table">
-  <%= render 'header' %>
-  <tbody>
-  <%= render @places %>
-  </tbody>
-</table>
+  <table class="table">
+    <%= render 'header' %>
+    <tbody>
+    <%= render @places %>
+    </tbody>
+  </table>
+</div>
