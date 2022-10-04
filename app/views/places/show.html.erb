@@ -5,7 +5,7 @@
 <!--    <figure class="image is-2by1">-->
       <%#= link_to image_tag(@place.picture_link, alt: @place.name), @place  %>
 <!--    </figure>-->
-    <%= image_tag @place.picture_link %>
+    <%= image_tag(@place.picture_link, alt: @place.name)  %>
   </div>
   <div class="card-content">
     <div class="media">
@@ -32,7 +32,7 @@
       <strong>Location on map</strong>
       <figure class="image is-3by2">
 <!--        <img src="<%#= @map_link %>">-->
-        <%= image_tag @map_link, width: '20%' %>
+        <%= image_tag(@map_link, width: '20%', alt: "A map view") %>
       </figure>
     </div>
   </div>
