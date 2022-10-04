@@ -1,0 +1,10 @@
+<p class="mb-5">
+  Found <%= pluralize(@places.count, 'Movie') %> found when search for <%= params[:keywords] %>
+</p>
+
+<table class="table">
+  <%= render 'header' %>
+  <tbody>
+  <%= render @places %>
+  </tbody>
+</table>
