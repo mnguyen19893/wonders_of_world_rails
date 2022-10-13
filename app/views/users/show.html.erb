@@ -6,7 +6,7 @@
   <p><strong>Bio: </strong><%= @user.bio %></p>
 
 
-  <% if @user.created_places.count > 0 %>
+  <% if @user.created_places.length > 0 %>
     <p><strong>Places created:</strong></p>
     <ul>
       <% @user.created_places.each do |place|  %>
@@ -15,7 +15,7 @@
     </ul>
   <% end %>
 
-  <% if @user.places.count > 0 %>
+  <% if @user.places.length > 0 %>
     <p><strong>Places liked:</strong></p>
     <ul>
       <% @user.places.each do |place|  %>

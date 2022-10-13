@@ -22,7 +22,7 @@ csv_data = File.read(csv_file)
 places = CSV.parse(csv_data, headers: true)
 
 places.each do |place|
-  type = Type.find_or_create_by(name: place['type'])
+  type = Type.find_or_create_by(name: place['type']) # parent
   if type && type.valid?
     my_place = type.places.new(
       name: place['name'],

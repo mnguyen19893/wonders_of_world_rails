@@ -1,6 +1,6 @@
 <div class="content">
   <p class="mb-5">
-    Found <%= pluralize(@places.count, 'Movie') %> found when search for "<%= params[:keywords]%>"
+    Found <%= pluralize(@places.length, 'Place') %> found when search for "<%= params[:keywords]%>"
     <% if @type %>
       , type: "<%= @type.name %>"
     <% end %>

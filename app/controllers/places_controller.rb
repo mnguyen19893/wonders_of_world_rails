@@ -18,9 +18,9 @@ class PlacesController < ApplicationController
     type = params[:type]
     place_search = "%#{params[:keywords]}%"
     if type == ""
-      @places = Place.where("name LIKE ?", place_search)
+      @places = Place.includes(:user, :type).where("name LIKE ?", place_search)
     else
-      @places = Place.where("name LIKE ? AND type_id = ?", place_search, type)
+      @places = Place.includes(:user, :type).where("name LIKE ? AND type_id = ?", place_search, type)
       @type = Type.find(type)
     end
   end
